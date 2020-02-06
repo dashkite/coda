@@ -1,0 +1,33 @@
+{
+  "name": "hydrogen-docs",
+  "version": "0.0.1",
+  "description": "Hydrogen-based API docs",
+  "main": "build/npm/src/index.js",
+  "scripts": {
+    "test": "p9k test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dashkite/hydrogen-docs.git"
+  },
+  "keywords": [
+    "documentation",
+    "api",
+    "static",
+    "site"
+  ],
+  "author": "Dan Yoder",
+  "license": "Hippocratic",
+  "bugs": {
+    "url": "https://github.com/dashkite/hydrogen-docs/issues"
+  },
+  "homepage": "https://github.com/dashkite/hydrogen-docs#readme",
+  "devDependencies": {
+    "panda-9000": "^5.0.2",
+    "panda-builder": "^4.0.13"
+  },
+  "dependencies": {
+    "@dashkite/hydrogen": "file:../hydrogen",
+    "panda-parchment": "^6.0.3"
+  }
+}
