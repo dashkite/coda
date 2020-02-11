@@ -8,7 +8,6 @@ class Method
     basic, summary
     route "/api/types/{type}/{scope}/methods/{name}"
     route "/api/interfaces/{interface}/{scope}/methods/{name}"
-    data load "yaml"
     index "title"
   ]
 

@@ -44,7 +44,6 @@ class Type
     basic, summary, examples
     route "/api/types/{name}"
     index "title"
-    data load "yaml"
     ready aliases
   ]
 

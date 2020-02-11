@@ -7,7 +7,6 @@ class Function
   mix @, [
     basic, summary
     route "/api/functions/{name}"
-    data load "yaml"
     index "title"
   ]
 
