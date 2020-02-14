@@ -1,4 +1,4 @@
-import {properties, include, clone, isType, isFunction} from "panda-parchment"
+import {properties} from "panda-parchment"
 import {mix, basic, data, summary, examples, index} from "@dashkite/hydrogen"
 
 class Method
@@ -14,8 +14,5 @@ class Method
     scope: get: -> @data.scope
     signatures: get: -> @data.signatures
     variables: get: -> @data.variables
-
-clone._.define (isType Method), ({source, reference, bindings}) ->
-  include new Method, clone {source, reference, bindings}
 
 export {Method}
