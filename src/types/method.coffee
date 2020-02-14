@@ -1,13 +1,10 @@
 import {properties, include, clone, isType, isFunction} from "panda-parchment"
-import {mix, basic, data, summary, examples, index, route} from "@dashkite/hydrogen"
-import {load} from "./helpers"
+import {mix, basic, data, summary, examples, index} from "@dashkite/hydrogen"
 
 class Method
 
   mix @, [
     basic, summary
-    route "/api/types/{type}/{scope}/methods/{name}"
-    route "/api/interfaces/{interface}/{scope}/methods/{name}"
     index "title"
   ]
 
@@ -20,3 +17,5 @@ class Method
 
 clone._.define (isType Method), ({source, reference, bindings}) ->
   include new Method, clone {source, reference, bindings}
+
+export {Method}

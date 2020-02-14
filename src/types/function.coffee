@@ -1,12 +1,10 @@
 import {properties} from "panda-parchment"
-import {mix, basic, data, summary, examples, index, route} from "@dashkite/hydrogen"
-import {load} from "./helpers"
+import {mix, basic, data, summary, examples, index} from "@dashkite/hydrogen"
 
 class Function
 
   mix @, [
     basic, summary
-    route "/api/functions/{name}"
     index "title"
   ]
 
@@ -14,3 +12,5 @@ class Function
     title: get: -> @name
     signatures: get: -> @data.signatures
     variables: get: -> @data.variables
+
+export {Function}

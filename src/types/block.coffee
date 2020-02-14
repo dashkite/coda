@@ -1,8 +1,8 @@
-import {mix, basic, data, title, content, route} from "@dashkite/hydrogen"
-import {load, loaders} from "./helpers"
+import {mix, basic, data, title, content} from "@dashkite/hydrogen"
 
 class Block
   mix @, [
     basic, title
-    route "{/path*}"
   ]
+
+export {Block}

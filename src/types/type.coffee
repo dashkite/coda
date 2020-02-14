@@ -1,7 +1,6 @@
 import {properties, all, isType, include, clone} from "panda-parchment"
-import {mix, basic, summary, examples,
-  route, index, data, ready, add, glob} from "@dashkite/hydrogen"
-import {load} from "./helpers"
+import {mix, basic, summary, index, data,
+  ready, add, glob} from "@dashkite/hydrogen"
 
 # It's okay to wait on this initializer because it depends on the interfaces
 # but the interfaces don't depend on types. Otherwise, we'd get a deadlock.
@@ -41,11 +40,12 @@ aliases = ->
 class Type
 
   mix @, [
-    basic, summary, examples
-    route "/api/types/{name}"
+    basic, summary
     index "title"
     ready aliases
   ]
 
   properties @::,
     title: get: -> @name
+
+export {Type}
