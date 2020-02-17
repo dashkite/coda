@@ -1,8 +1,8 @@
-import {mix, basic, data, title, content} from "@dashkite/hydrogen"
+import {mix, basic, data, title, summary} from "@dashkite/hydrogen"
 
 class Block
   mix @, [
-    basic, title
+    basic, title, summary
   ]
 
 export {Block}
